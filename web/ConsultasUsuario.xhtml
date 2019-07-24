@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Defunciones Fetales | Usuarios</title>
+    </h:head>
+    <h:body style="background-image:url(image/defunciones.jpg)">
+         <br></br>
+         <br></br>
+        <div align="center">
+        <h:form style="width:1200px;">
+                    <p:menubar>
+                        <p:menuitem action="/admin" value="Defunciones Fetales"></p:menuitem>
+                        <p:menuitem action="/admin" value="Administrador"></p:menuitem>
+                        <p:menuitem action="/registro" value="Registrar"></p:menuitem>
+                        <f:facet name="options">
+                        <p:commandButton action="#{login.logout}" value="Salir"/>
+                        </f:facet>
+                        
+                    </p:menubar>
+        </h:form>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            
+        <p:panel header="REGISTRO DE USUARIOS" style="width:1100px; heigh:300px">
+        <h:form>
+            
+                
+            <p:dataTable value="#{datosManagedBean.vec}" var="tabla" editable="true" style="width:1000px; height: 200px">
+                        <p:column headerText="NOMBRE">
+                            #{tabla.nombre}
+                        </p:column>
+                        <p:column headerText="CEDULA" style="width:100px;">
+                            #{tabla.cedula}
+                        </p:column>
+                        <p:column headerText="CLAVE" style="width:100px;">
+                           ******
+                        </p:column >
+                        <p:column headerText="ESTADO" style="width:80px;">
+                            #{tabla.estado}
+                        </p:column>
+                        <p:column headerText="CORREO" style="width:200px;">
+                            #{tabla.correo}
+                        </p:column>
+                    </p:dataTable>
+
+        </h:form>
+            </p:panel>
+        </div>
+    </h:body>
+</html>
+

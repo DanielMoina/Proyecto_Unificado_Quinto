@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <title>Defunciones Fetales | Usuario</title>
+    </h:head>
+    <h:body style="background-image:url(image/defunciones.jpg)">
+        <div align="center">
+        <h:form>
+            <p:panel header="Bienvenido/a #{login.user}" style="width:1000px">
+                <p:growl id="messages"/>
+                <p:menubar>
+                    <p:menuitem action="/cambiar_password" value="Cambiar Contraseña"/>
+                    <f:facet name="options">
+                        <p:commandButton action="#{login.logout}" value="Salir"/>
+                    </f:facet>
+                   
+                </p:menubar>
+                <p:layout style="min-width:400px;min-height:800px;">
+                    
+                    <p:layoutUnit position="center">
+                        
+                        <br></br>
+                        <div align="center">
+                            
+                        <p:chart type="bar" model="#{chartView.barModel}" style="width:700px;height:400px"/>
+                        <br /><br />
+                        <p:chart type="pie" model="#{chartView.pieModel1}" style="width:400px;height:300px" />
+                        </div>
+                    </p:layoutUnit>
+                </p:layout>
+                <div align="center">
+                <p:commandButton  value="Imprimir" onclick="window.print();"/>
+                </div>
+
+            </p:panel>
+        </h:form>
+        </div>
+    </h:body>
+</html>
+

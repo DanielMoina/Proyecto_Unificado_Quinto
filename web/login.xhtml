@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Defunciones Fetales | Inicio de Sesion</title>
+ 
+</h:head>
+<h:body style="background-image:url(image/defunciones.jpg)">
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <h:form>
+        <p:growl id="msg"  sticky="false" life="2000" />
+        <div align="center">
+            <p:panel header="Bienvenido a Defunciones Fetales" style="width:400px">
+                <img src="image/user_ico.png" style="width: 75px"/>
+		<h4>Inicio de Sesion</h4>
+                <br></br>
+                <img src="image/login.png" style="width:35px"/>
+		<h:inputText id="username" value="#{login.user}" required="true">
+                    <p:ajax update="msg" event="keyup">
+                        </p:ajax>
+                </h:inputText>
+		<h:message for="username"/>
+		<br /><br />
+		
+		<img src="image/passwor.png" style="width:35px"/>
+                <h:inputSecret id="password" value="#{login.pwd}" required="true">
+                    <p:ajax update="msg" event="keyup">
+                        </p:ajax>
+                </h:inputSecret>
+		<h:message for="password"/>
+		<br /><br />
+		
+		<h:commandButton   action="#{login.validateUsernamePassword}" 
+			value="Iniciar Sesion"/>
+                <br></br>
+                <br></br>
+                
+                
+        </p:panel>
+            <div> <a href="registrousuario.xhtml">Registrarse</a></div>
+        </div>
+        </h:form>
+</h:body>
+</html>

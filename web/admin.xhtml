@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <title>Defunciones Fetales | Administrador</title>
+    </h:head>
+    <h:body style="background-image:url(image/defunciones.jpg)">
+        <br/>
+        <br/>
+        <div align="center">
+        <h:form style="width:1200px;">
+                    <p:menubar>
+                        <p:menuitem action="/admin" value="Defunciones Fetales"></p:menuitem>
+                        <p:menuitem action="/modificar" value="Modificar Estados"></p:menuitem>
+                        <f:facet name="options">
+                            <p:commandButton action="#{login.logout}" value="Salir"></p:commandButton>
+                        </f:facet>
+                        
+                    </p:menubar>
+        </h:form>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+         
+        <h:form>
+            <p:panel header="Bienvenido/a #{login.user}" style="width:600px; height: 250px">
+               
+                <div align="center">
+                    <p:menu style="width:500px; height: 150px">
+                        
+                        <p:submenu label="ADMINISTRADOR">
+
+                            <p:menuitem value="Consultar usuarios" action="/ConsultasUsuario"></p:menuitem>
+                            <p:menuitem  action="/registro" value=" Registrar Usuario"></p:menuitem>
+                            <p:menuitem action="/Bloquear_usuario" value=" Bloquear usuarios"></p:menuitem>
+                            
+                            
+                        </p:submenu>
+                    </p:menu>
+                </div>
+                <a href="registrousuario.xhtml">Registrarse</a>
+            </p:panel>
+            
+        </h:form>
+        </div>
+    </h:body>
+</html>
